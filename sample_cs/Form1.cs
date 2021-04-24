@@ -16,5 +16,14 @@ namespace sample_cs
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Person person = new Person();
+            person.name = tbName.Text;
+            person.age = (int)nudAge.Value;
+
+            MessageBox.Show(String.Format("{0} {1}", person.name, person.age));
+        }
     }
 }
