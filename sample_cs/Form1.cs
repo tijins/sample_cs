@@ -32,17 +32,30 @@ namespace sample_cs
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if(tbName.Text.Length == 0)
+            try
             {
-                MessageBox.Show("名前を入力してください");
-                return;
+                if (tbName.Text.Length == 0)
+                {
+                    throw new Exception("名前を入力してください");
+                }
+
+                if (nudAge.Value < 20)
+                {
+                    throw new Exception("未成年者は登録できません");
+
+                }
+
+                Person person = new Person();
+                person.Name = tbName.Text;
+                person.Age = (int)nudAge.Value;
+
+                bs.Add(person);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
-            Person person = new Person();
-            person.Name = tbName.Text;
-            person.Age = (int)nudAge.Value;
-
-            bs.Add(person);
         }
     }
 }
