@@ -32,6 +32,12 @@ namespace sample_cs
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if(tbName.Text.Length == 0)
+            {
+                MessageBox.Show("名前を入力してください");
+                return;
+            }
+
             Person person = new Person();
             person.Name = tbName.Text;
             person.Age = (int)nudAge.Value;
