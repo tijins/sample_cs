@@ -12,7 +12,7 @@ namespace sample_cs
         string name { get; set; }
         int age { get; set; }
         */
-        public string name;
-        public int age;
+        public string Name { get; set; }
+        public int Age { get; set; }
     }
 }

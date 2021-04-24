@@ -33,7 +33,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.nudAge = new System.Windows.Forms.NumericUpDown();
+            this.dgvMembers = new System.Windows.Forms.DataGridView();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nudAge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -81,11 +85,44 @@
             this.nudAge.Size = new System.Drawing.Size(120, 27);
             this.nudAge.TabIndex = 2;
             // 
+            // dgvMembers
+            // 
+            this.dgvMembers.AllowUserToAddRows = false;
+            this.dgvMembers.AllowUserToDeleteRows = false;
+            this.dgvMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMembers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colName,
+            this.colAge});
+            this.dgvMembers.Location = new System.Drawing.Point(23, 68);
+            this.dgvMembers.Name = "dgvMembers";
+            this.dgvMembers.ReadOnly = true;
+            this.dgvMembers.RowHeadersWidth = 51;
+            this.dgvMembers.RowTemplate.Height = 24;
+            this.dgvMembers.Size = new System.Drawing.Size(557, 305);
+            this.dgvMembers.TabIndex = 4;
+            // 
+            // colName
+            // 
+            this.colName.DataPropertyName = "Name";
+            this.colName.HeaderText = "名前";
+            this.colName.MinimumWidth = 6;
+            this.colName.Name = "colName";
+            this.colName.Width = 125;
+            // 
+            // colAge
+            // 
+            this.colAge.DataPropertyName = "Age";
+            this.colAge.HeaderText = "年齢";
+            this.colAge.MinimumWidth = 6;
+            this.colAge.Name = "colAge";
+            this.colAge.Width = 125;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 95);
+            this.ClientSize = new System.Drawing.Size(592, 385);
+            this.Controls.Add(this.dgvMembers);
             this.Controls.Add(this.nudAge);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -94,6 +131,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.nudAge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,6 +144,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown nudAge;
+        private System.Windows.Forms.DataGridView dgvMembers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAge;
     }
 }
 

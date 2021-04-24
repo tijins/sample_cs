@@ -12,18 +12,31 @@ namespace sample_cs
 {
     public partial class Form1 : Form
     {
+        // 最初に実行される
+        // ここは、グローバル変数のように使える
+        private List<Person> members = new List<Person>();
+        private BindingSource bs = new BindingSource();
+
+        // フォームが表示された時に実行される
         public Form1()
         {
             InitializeComponent();
+
+            // 列の自動追加を無効にする
+            dgvMembers.AutoGenerateColumns = false;
+
+            // BindingSourceをDataGridViewに表示する
+            bs.DataSource = members;
+            dgvMembers.DataSource = bs;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Person person = new Person();
-            person.name = tbName.Text;
-            person.age = (int)nudAge.Value;
+            person.Name = tbName.Text;
+            person.Age = (int)nudAge.Value;
 
-            MessageBox.Show(String.Format("{0} {1}", person.name, person.age));
+            bs.Add(person);
         }
     }
 }
