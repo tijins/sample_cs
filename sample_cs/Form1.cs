@@ -19,12 +19,16 @@ namespace sample_cs
 
         private void btnHello_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello");
+            MessageBox.Show("こんにちは");
         }
 
         private void btnBye_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Goodbye");
+            if(MessageBox.Show("さよならですか？","サンプルアプリ", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                MessageBox.Show("さようなら");
+                Close();
+            }
         }
     }
 }
