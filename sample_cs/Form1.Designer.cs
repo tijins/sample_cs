@@ -28,13 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnHello = new System.Windows.Forms.Button();
+            this.btnBye = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnHello
+            // 
+            this.btnHello.Location = new System.Drawing.Point(61, 60);
+            this.btnHello.Name = "btnHello";
+            this.btnHello.Size = new System.Drawing.Size(75, 23);
+            this.btnHello.TabIndex = 0;
+            this.btnHello.Text = "HELLO";
+            this.btnHello.UseVisualStyleBackColor = true;
+            this.btnHello.Click += new System.EventHandler(this.btnHello_Click);
+            // 
+            // btnBye
+            // 
+            this.btnBye.Location = new System.Drawing.Point(143, 59);
+            this.btnBye.Name = "btnBye";
+            this.btnBye.Size = new System.Drawing.Size(75, 23);
+            this.btnBye.TabIndex = 1;
+            this.btnBye.Text = "BYE";
+            this.btnBye.UseVisualStyleBackColor = true;
+            this.btnBye.Click += new System.EventHandler(this.btnBye_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(391, 156);
+            this.Controls.Add(this.btnBye);
+            this.Controls.Add(this.btnHello);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnHello;
+        private System.Windows.Forms.Button btnBye;
     }
 }
 

@@ -16,5 +16,15 @@ namespace sample_cs
         {
             InitializeComponent();
         }
+
+        private void btnHello_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello");
+        }
+
+        private void btnBye_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Goodbye");
+        }
     }
 }
